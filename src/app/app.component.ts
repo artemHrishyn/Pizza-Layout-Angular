@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/main-block/header/header.component';
 import { FooterComponent } from './components/main-block/footer/footer.component';
+import { MainComponent } from './pages/main/main.component';
 
 @Component({
   selector: 'piz-root',
@@ -11,7 +12,8 @@ import { FooterComponent } from './components/main-block/footer/footer.component
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
