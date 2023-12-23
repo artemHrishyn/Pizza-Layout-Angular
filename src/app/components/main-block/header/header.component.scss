@@ -42,15 +42,18 @@ img{
     max-width: 605px;
     width: 100%;
     
-    li{
+    li:hover{
+        padding: 8px 15px;
+        background-color: $bgBlock;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    a{
         color: hsla(0, 0%, 100%, 0.7);
         font-size: 18px;
-        
+
         &:hover{
-            padding: 8px 15px;
-            background-color: $bgBlock;
-            cursor: pointer;
-            border-radius: 20px;
             font-size: 22px;
             color: #fff;
         }
