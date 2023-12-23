@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { OrderComponent } from '../../components/order/order.component';
 
 @Component({
   selector: 'piz-main',
   standalone: true,
-  imports: [],
+  imports: [
+    OrderComponent
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

@@ -47,7 +47,7 @@ $orange: #b83922;
             border-left: 2px solid #f50057;
             transition: 0.5s;
             cursor: pointer;
-
+            
             &:hover {
                 left: 0px;
 
@@ -68,7 +68,7 @@ $orange: #b83922;
                 z-index: 1;
                 transition: 0.5s;
             }
-
+        
             &:before {
                 content: "";
                 position: absolute;
@@ -78,16 +78,10 @@ $orange: #b83922;
                 transform: scaleX(0);
                 transform-origin: left;
                 transition: 0.5s;
-                }
+            }
         }
     }
     
-    a{
-        align-self: baseline;
-        padding: 19px 30px;
-        border: 2px solid $orange;
-        border-radius: 20px;
-    }
 }
 
 .product{
