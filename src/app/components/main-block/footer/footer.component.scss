@@ -1,0 +1,52 @@
+$bgBlock: #b83922;
+$color: hsla(0, 0%, 100%, 0.7);
+
+:host{
+    padding: 50px;
+    background-color: $bgBlock;
+    display: flex;
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 30px;
+}
+
+.logo{
+    display: flex;
+    max-width: 546px;
+    width: 100%;
+
+    li{
+        font-size: 25px;
+        margin-left: 15px;
+    }
+}
+
+.navig{
+    
+    li{
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    li, a{
+        color: hsla(0, 0%, 100%, 0.7);
+        font-size: 17px;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+}

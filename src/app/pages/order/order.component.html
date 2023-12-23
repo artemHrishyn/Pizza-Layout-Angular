@@ -1,0 +1,45 @@
+<div class="info">
+    <h1>Ваше замовлення</h1>
+
+    <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+      
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+      
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+    </dl>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti perspiciatis, eveniet sunt tenetur alias aperiam? Ea, quas nostrum fugiat, tenetur explicabo iste quo quod blanditiis, facere officia molestias est nihil ipsum iure temporibus ipsa saepe.</p>
+</div>
+
+<form novalidate [formGroup]="productData" (ngSubmit)="onSubmit(productData)">
+    <h1>Lorem, ipsum.</h1>
+    <input type="text" formControlName="name" placeholder="Name" required>
+    <p class="error"
+        *ngIf="productData.get('name')?.invalid && productData.get('name')?.touched"
+    >
+        Поле обов'язкове для введення
+    </p>
+    <input type="text" formControlName="adress" placeholder="Adress" required>
+    <p class="error"
+        *ngIf="productData.get('adress')?.invalid && productData.get('adress')?.touched"
+    >
+        Поле обов'язкове для введення
+    </p>
+    <input type="email" formControlName="email" placeholder="example@example.com" required>
+    <p class="error"
+        *ngIf="productData.get('email')?.invalid && productData.get('email')?.touched"
+    >
+        Поле обов'язкове для введення
+    </p>
+    <input type="text" formControlName="phone" placeholder="+38(093)64-70-424" required>
+    <p class="error"
+        *ngIf="productData.get('phone')?.invalid && productData.get('phone')?.touched"
+    >
+    Поле обов'язкове для введення. Або не вірний формат телефону.(+38(0ХХ)ХХ-ХХ-ХХХ)
+    </p>
+    <button type="submit" value="Click">Set data</button>
+</form>
