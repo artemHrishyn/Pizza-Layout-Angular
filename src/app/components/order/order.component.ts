@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { GoToUrlService } from '../../services/go-to-url.service';
 
 @Component({
   selector: 'piz-order',
   standalone: true,
-  imports: [],
+  imports: [
+  ],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
 export class OrderComponent {
-
+  
+  constructor(private goToUrlService: GoToUrlService){}
+  public goToUrl(value: string) {
+    this.goToUrlService.goToUrl(value);
+  }
 }
