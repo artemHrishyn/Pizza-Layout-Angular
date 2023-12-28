@@ -28,6 +28,5 @@ export class OrderComponent {
   
   onSubmit(form: FormGroup) {
     console.log(form);
-    
   }
 }

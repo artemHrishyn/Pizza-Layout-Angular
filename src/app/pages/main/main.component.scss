@@ -120,6 +120,10 @@ $orange: #b83922;
         max-width: 200px;
         width: 100%;
 
+        div{
+            cursor: pointer;
+        }
+
         &__left{
             display: flex;
             padding: 15px 0;
