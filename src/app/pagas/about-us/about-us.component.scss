@@ -1,0 +1,49 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    padding: 55px 0 55px 375px;
+    align-self: center;
+}
+
+h1{
+    margin-bottom: 56px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+h3{
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.info{
+    margin-top: 53px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 100px;
+    max-width: 1175px;
+    width: 100%;
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+
+        &__text-all{
+            color: #c7c6ca;
+        }
+        
+        &__text-mini{
+            color: #ffffff38;
+        }
+    }
+}
+
+p{
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+li{
+    margin-bottom: 26px;
+    font-size: 15px;
+}
