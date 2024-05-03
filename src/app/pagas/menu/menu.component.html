@@ -1,0 +1,20 @@
+<h1>Меню</h1>
+
+<ul class="product">
+    <li *ngFor="let item of products">
+        <pla-product [product]="item"></pla-product>
+    </li>
+</ul>
+
+<div class="but">
+    <div class="but__left">
+        <img src="../../../assets/icon/array-left.svg" alt="array">
+    </div>
+    <div class="but__right">
+        <img src="../../../assets/icon/array-right.svg" alt="array">
+    </div>
+</div>
+
+<p>
+    1 / 3
+</p>
