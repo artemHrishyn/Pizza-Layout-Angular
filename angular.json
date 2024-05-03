@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Pizza-Layout-Angular": {
+    "pizza-layout-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -84,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Pizza-Layout-Angular:build:production"
+              "buildTarget": "pizza-layout-angular:build:production"
             },
             "development": {
-              "buildTarget": "Pizza-Layout-Angular:build:development"
+              "buildTarget": "pizza-layout-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,7 +95,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Pizza-Layout-Angular:build"
+            "buildTarget": "pizza-layout-angular:build"
           }
         },
         "test": {
@@ -116,6 +116,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "pizza-layout-angular:build:production",
+              "serveTarget": "pizza-layout-angular:serve:production"
+            },
+            "development": {
+              "buildTarget": "pizza-layout-angular:build:development",
+              "serveTarget": "pizza-layout-angular:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

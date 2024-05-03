@@ -1,0 +1,23 @@
+<ul class="logo">
+    <li><img src="../../../../assets/logo.svg" alt="logo"></li>
+    <li>Pizzanio</li>
+</ul>
+<ul class="navig">
+    <li >
+        <a [routerLink]="'main'" routerLinkActive="active">
+            Головна
+        </a>
+    </li>
+    <li><a [routerLink]="'menu'" routerLinkActive="active">
+        Меню
+    </a></li>
+    <li><a [routerLink]="'order'" routerLinkActive="active">Замовлення</a></li>
+    <li><a [routerLink]="'about-us'" routerLinkActive="active">Про нас</a></li>
+</ul>
+
+<ul class="personal">
+    <li><img src="../../../../assets/icon/user.svg" alt="user" (click)="loginForm()"></li>
+    <li><img src="../../../../assets/icon/internet.svg" alt="internet"></li>
+</ul>
+
+<pla-login-form *ngIf="isLoginForm"></pla-login-form>

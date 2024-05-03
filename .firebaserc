@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pizza-layout-angular": {
+      "hosting": {
+        "pizza-layout-angular": [
+          "pizza-layout-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pizza-layout-angular"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "pizza-layout-angular",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

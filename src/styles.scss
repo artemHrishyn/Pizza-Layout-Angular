@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: #1d1b2b;
+    font-family: 'Inconsolata', monospace ;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  a{
+    text-decoration: none;
+  }

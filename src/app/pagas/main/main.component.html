@@ -1,0 +1,32 @@
+<div class="info">
+    <h1>
+        Pizza
+        <span>Special</span>
+    </h1>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, repellendus distinctio vel alias libero ipsam labore quod esse odio fugiat perferendis a, inventore nobis, quas tempore quidem!</p>
+    
+    <ul>
+        <li><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span></li>
+        <li><span>Lorem ipsum dolor sit amet consectetur.</span></li>
+        <li><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eius consequuntur.</span></li>
+    </ul>
+    <pla-order></pla-order>
+</div>
+<div class="product">
+    <div class="product__info">
+        <div class="product__info__discount">-10%</div>
+        <div class="product__info__img">
+            <img [src]="img" alt="product">
+        </div>
+    </div>
+    <div class="product__but">
+        <div class="product__but__left" (click)="chengPizza('left')">
+            <img src="../../../assets/icon/array-left.svg" alt="array">
+        </div>
+        <div class="product__but__right" (click)="chengPizza('right')">
+            <img src="../../../assets/icon/array-right.svg" alt="array">
+        </div>
+    </div>
+</div>
