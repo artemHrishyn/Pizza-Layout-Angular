@@ -1,1 +1,48 @@
-<p>login-form works!</p>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css"/>
+<link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<div class="signin cf">
+  <div class="signin__avatar">
+      <i class="fa-solid fa-pizza-slice"></i>
+  </div>
+  <form novalidate [formGroup]="loginData" (ngSubmit)="onSubmit(loginData)">
+
+    <div class="signin__inputrow">
+      <input
+        id="name"
+        type="text"
+        placeholder="Username"
+        formControlName="login"
+        name="login" required
+        />
+      <label class="ion-person" for="name"></label>
+      <p
+        *ngIf="loginData.get('login')?.invalid && loginData.get('login')?.touched"
+      >
+        Поле обов'язкове для введення
+      </p>
+    </div>
+    <div class="signin__inputrow">
+      <input
+        id="pass"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        name="password" required
+        />
+      <label class="ion-locked" for="pass"></label>
+      <p
+        *ngIf="
+          loginData.get('password')?.invalid && loginData.get('password')?.touched
+        "
+      >
+        Поле обов'язкове для введення
+      </p>
+    </div>
+    <input id="remember" type="checkbox" name="remember"/>
+    <input type="submit" value="Login"/>
+  </form>
+</div>

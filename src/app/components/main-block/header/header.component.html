@@ -16,8 +16,15 @@
 </ul>
 
 <ul class="personal">
-    <li><img src="../../../../assets/icon/user.svg" alt="user" (click)="loginForm()"></li>
-    <li><img src="../../../../assets/icon/internet.svg" alt="internet"></li>
+    <li><img src="{{ userImg }}" alt="user" (click)="loginForm()"/></li>
+    <li><img src="../../../../assets/icon/internet.svg" alt="internet"/></li>
 </ul>
 
-<pla-login-form *ngIf="isLoginForm"></pla-login-form>
+<pla-login-form
+    *ngIf="isLoginForm"
+    [isLogin]="isLoginForm"
+    (closeLogin)="returnLogin()"
+    [imgLogin]="userImg"
+    (returnImgLogin)="returnImage($event)"
+    >
+</pla-login-form>
