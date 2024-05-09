@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductComponent } from '../../components/product/product.component';
 import { CommonModule } from '@angular/common';
+import { DataService } from '../../services/firebase/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'pla-menu',
   standalone: true,
   imports: [
     CommonModule,
+    HttpClientModule,
     ProductComponent
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   products = [
     {
       id: 1,
@@ -69,4 +72,18 @@ export class MenuComponent {
       price: 100
     },
   ]
+
+  public data: any;
+  constructor(private firebaseDataService: DataService) { }
+
+  ngOnInit() {
+    
+    this.firebaseDataService.getData().subscribe({
+      next: (data) => {
+        this.data = data;
+        console.log('Data received:', data);
+      },
+      error: (error) => console.error('Error fetching data:', error)
+    });
+  }
 }
